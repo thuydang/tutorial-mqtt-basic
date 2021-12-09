@@ -1,19 +1,21 @@
 ## Quick start
 
-Make sure mosquitto.conf file has correct configuration:
+### Make sure mosquitto.conf file has correct configuration:
 
 Listen on all interfaces (default is 127.0.0.1 and can't be accessed from container network).
+    
     bind_address 0.0.0.0
 
 Anonymous user
+    
     allow_anonymous true
 
 
-Start docker container for eclipse mosquitto MQTT broker:
+### Start docker container for eclipse mosquitto MQTT broker:
 
     docker-compose -f docker-compose-mqtt.yml up
 
-Start an MQTT Client, e.g., MQTTBox https://chrome.google.com/webstore/detail/mqttbox/kaajoficamnjijhkeomgfljpicifbkaf
+### Start an MQTT Client, e.g., MQTTBox https://chrome.google.com/webstore/detail/mqttbox/kaajoficamnjijhkeomgfljpicifbkaf
 
 Configure connection as below:
 
@@ -63,5 +65,5 @@ QoS: 0 - Almost Once
 ## More resources
 
 - Install Mosquitto: https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-ubuntu-16-04
-
+- Secure MQTT, forwarding, etc.
 
