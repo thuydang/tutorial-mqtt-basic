@@ -1,0 +1,41 @@
+# WARNING: Do not deploy this tutorial configuration directly to a production environment
+#
+# The tutorial docker-compose files have not been written for production deployment and will not
+# scale. A proper architecture has been sacrificed to keep the narrative focused on the learning
+# goals, they are just used to deploy everything onto a single Docker machine.
+#
+# This is all to avoid the need of multiple machines, generating certificates, encrypting secrets
+# and so on, purely so that a single docker-compose file can be read as an example to build on,
+# not use directly.
+#
+# See .env for variable definitions.
+#
+version: "3.5"
+
+services:
+
+  mosquitto:
+    image: eclipse-mosquitto
+    hostname: mosquitto
+    container_name: mosquitto
+    expose:
+      - "1883"
+      - "8883"
+      - "9001"
+    ports:
+      - "1883:1883"
+      - "8883:8883"
+      - "9001:9001"
+    environment:
+      - MOSQUITTO_USERNAME=${MOSQUITTO_USERNAME}
+      - MOSQUITTO_PASSWORD=${MOSQUITTO_PASSWORD}
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - ./mosquitto-vl/data:/mosquitto/data
+      - ./mosquitto-vl/logs:/mosquitto/logs
+    restart: unless-stopped
+
+#volumes:
+#  mosquitto-data:
+#  mosquitto-logs:
+#  mosquitto-conf:
