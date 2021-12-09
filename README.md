@@ -38,7 +38,7 @@ Will - QoS: 0 - Almost Once
 Will - Retain: No
 Will - Payload: 
 ```
-![Configure Connection](./docs/media/14-27-27.png)
+![Configure Connection](./docs/media/Screenshot%20from%202021-12-09%2014-27-27.png)
 
 Configure Publisher as shown below:
 
@@ -58,7 +58,7 @@ Topic to subscribe: /my/topic   (use /# to subscribe to all topic).
 QoS: 0 - Almost Once
 ```
 
-![Configure Pub/Sub](./docs/media/Screenshot from 2021-12-09 14-17-53.png)
+![Configure Pub/Sub](./docs/media/Screenshot%20from%202021-12-09%2014-17-53.png)
 
 ## More resources
 
