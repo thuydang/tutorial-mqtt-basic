@@ -17,6 +17,7 @@ Start an MQTT Client, e.g., MQTTBox https://chrome.google.com/webstore/detail/mq
 
 Configure connection as below:
 
+```
 MQTT Client Name: Example
 MQTT Client Id: Auto generated
 Append timestamp to MQTT client id? Yes
@@ -36,20 +37,27 @@ Will - Topic
 Will - QoS: 0 - Almost Once
 Will - Retain: No
 Will - Payload: 
+```
 
 Configure Publisher as shown below:
 
 Topic to publish: /my/topic
+```
 QoS: 0 - Almost Once
 Retain: 
 Payload Type: Strings / JSON / XML / Characters
 e.g: {'hello':'world'}
 Payload: {'hello':'world'}
+```
 
 Configure Subscriber as shown below:
 
+```
 Topic to subscribe: /my/topic   (use /# to subscribe to all topic). 
 QoS: 0 - Almost Once
+```
+## More resources
 
+- Install Mosquitto: https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-ubuntu-16-04
 
 
