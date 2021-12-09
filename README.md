@@ -38,6 +38,7 @@ Will - QoS: 0 - Almost Once
 Will - Retain: No
 Will - Payload: 
 ```
+![Screenshot from 2021-12-09 14-27-27]()
 
 Configure Publisher as shown below:
 
@@ -56,6 +57,8 @@ Configure Subscriber as shown below:
 Topic to subscribe: /my/topic   (use /# to subscribe to all topic). 
 QoS: 0 - Almost Once
 ```
+
+
 ## More resources
 
 - Install Mosquitto: https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-ubuntu-16-04
